@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <app-bar></app-bar>
+
+    <main>
+      <h1>Buat Catatan</h1>
+      <input-bar></input-bar>
+
+      <!-- <form id="inputNote">
+        <div class="form-group">
+          <input
+            type="text"
+            id="note-title"
+            name="title"
+            required
+            minlength="3"
+            autocomplete="off"
+            pattern="^[a-zA-Z0-9 ]+$"
+            aria-describedby="titleValidation"
+          />
+          <label for="title">Judul catatan</label>
+          <p
+            class="title-validation"
+            id="titleValidation"
+            aria-live="polite"
+          ></p>
+        </div>
+        <div class="form-group">
+          <textarea
+            name="note"
+            id="note-body"
+            cols="30"
+            rows="10"
+            placeholder="Tulis catatan mu disini"
+          ></textarea>
+        </div>
+        <button type="submit" id="submit">Buat catatan</button>
+      </form> -->
+    </main>
+
+    <!-- <div class="notes__container">
+      <note-item title="Ini judul" body="ini body"></note-item>
+      <note-item title="Ini judul" body="ini body"></note-item>
+      <note-item title="Ini judul" body="ini body"></note-item>
+    </div> -->
+    <div class="notes__container"></div>
+    <footer-bar></footer-bar>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

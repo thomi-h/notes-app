@@ -1,0 +1,161 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+nav,
+footer {
+  background-color: #5ab2ff;
+  color: #fff9d0;
+  font-weight: 700;
+  padding: 24px;
+  font-size: 24px;
+}
+footer {
+  font-size: 1em;
+  text-align: center;
+}
+main {
+  margin: 24px auto;
+  display: grid;
+  max-width: fit-content;
+}
+main > h1 {
+  margin: 24px 0;
+  color: #0f67b1;
+}
+form {
+  display: grid;
+  gap: 8px;
+  width: 100%;
+}
+.form-group {
+  position: relative;
+}
+.form-group input,
+.form-group textarea,
+#submit {
+  display: block;
+  width: 100%;
+  padding: 12px 8px;
+  border-radius: 4px;
+  outline: none;
+  border: 2px solid #5ab2ff;
+  font-size: 1em;
+  color: #0f67b1;
+}
+
+.form-group label {
+  position: absolute;
+  top: 13px;
+  left: 8px;
+  font-weight: 600;
+  padding: 0 8px;
+  color: #0f67b1;
+  background-color: white;
+  transition: 150ms all ease-in-out;
+}
+
+.form-group input:focus-visible ~ label,
+.form-group input:valid ~ label {
+  width: fit-content;
+  top: -8px;
+  left: 10px;
+  font-size: 0.8em;
+}
+
+.form-group .title-validation {
+  color: red;
+  margin-top: 6px;
+  padding: 0 0 0 8px;
+}
+
+#submit {
+  background-color: #5ab2ff;
+  font-weight: 600;
+  border: none;
+  color: #fff9d0;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#submit:hover {
+  background-color: #a0deff;
+}
+
+#submit:active {
+  transform: translateY(1px);
+}
+
+.notes__container {
+  display: grid;
+  margin: 24px;
+  place-content: center;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, 240px);
+  /* grid-auto-rows: 1fr; */
+}
+
+/* .note__item {
+  height: 100%;
+  padding: 24px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  text-align: center;
+  background-color: antiquewhite;
+} */
+/* .note__item > span {
+  width: 20px;
+  display: block;
+  margin: auto auto 0;
+  border-radius: 1000px;
+  border: #333 1px solid;
+} */
+
+note-item {
+  display: flex;
+  padding: 24px;
+  gap: 16px;
+  background-color: #fff9d0;
+  border-radius: 8px;
+}
+
+.note__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.note__content .note__body {
+  flex-grow: 1;
+}
+
+.note__content .delete__button {
+  font-size: 1em;
+  margin-top: 24px;
+  padding: 8px 12px;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  border-radius: 10px;
+  align-self: flex-end;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.note__content .delete__button:hover {
+  background-color: rgba(191, 191, 191, 0.5);
+  color: red;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .notes__container {
+    grid-template-columns: 1fr;
+  }
+}
